@@ -64,7 +64,7 @@ base_templates:
   - template: modbase/neoforge.mods.toml.ftl
     usercodeComment: "#"
     writer: file
-    name: "@RESROOT/META-INF/neoforge.mods.toml"
+    name: "@RESROOT/META-INF/mods.toml"
   - template: pack.mcmeta.ftl # loaded from datapack generator
     writer: json
     name: "@RESROOT/pack.mcmeta"
