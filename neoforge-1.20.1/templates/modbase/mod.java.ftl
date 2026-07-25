@@ -10,13 +10,13 @@ import org.apache.logging.log4j.Logger;
 
 	public static final String MODID = "${modid}";
 
-	public ${JavaModName}(FMLJavaModLoadingContext context) {
+	public ${JavaModName}() {
 		// Start of user code block mod constructor
 		// End of user code block mod constructor
 
 		MinecraftForge.EVENT_BUS.register(this);
 
-		IEventBus bus = context.getModEventBus();
+		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		<@javacompress>
 		<#if w.hasSounds()>${JavaModName}Sounds.REGISTRY.register(bus);</#if>
 		<#if types["base:blocks"]??>${JavaModName}Blocks.REGISTRY.register(bus);</#if>
